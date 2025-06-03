@@ -6,6 +6,7 @@ const { VRFMockModule } = require("./vrfCoordinatorV2Mock");
 const { networkConfig, developmentChains } = require("../../helper-hardhat-config");
 const { network } = require("hardhat");
 
+
 module.exports = buildModule("raffleModule", (m) => {
   const isLocal = developmentChains.includes(network.name);
   const config = networkConfig[network.name];
