@@ -3,9 +3,11 @@
 
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
-module.exports = buildModule("LockModule", (m) => {
+const TokenModule = buildModule("TokenModule", (m) => {
   
-  const token = m.contract("", []);
+  const token = m.contract("GovToken", []);
 
   return { token };
 });
+
+module.exports = {TokenModule};
